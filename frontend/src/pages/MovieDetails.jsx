@@ -53,7 +53,9 @@ function MovieDetails() {
 
   if (!movie) {
     return (
-      <main className="movie-details-page details-message">Loading...</main>
+      <main className="movie-details-page details-message">
+        <span className="details-spinner" role="status" aria-label="Loading" />
+      </main>
     );
   }
 

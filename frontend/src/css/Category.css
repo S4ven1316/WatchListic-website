@@ -1,0 +1,87 @@
+.category-page {
+  min-height: 100vh;
+  margin-top: 60px;
+  background: #0f1115;
+}
+
+.category-content {
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 3rem) 4rem;
+  text-align: left;
+}
+
+.category-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.category-back:hover {
+  color: #fff;
+}
+
+.category-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.category-eyebrow {
+  margin-bottom: 0.45rem;
+  color: #a662f4;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.category-heading h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.category-heading > span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.category-movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem 1.25rem;
+}
+
+.category-movies .movie-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.category-message {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 560px) {
+  .category-content {
+    padding-top: 1.5rem;
+  }
+
+  .category-heading {
+    align-items: start;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .category-movies {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 0.75rem;
+  }
+}

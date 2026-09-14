@@ -9,7 +9,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import NavBar from "../components/NavBar";
 import { useMovieContext } from "../context/MovieContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
   document.title = "Home | WatchListic";
@@ -109,7 +109,7 @@ function Home() {
             <h1>{featuredMovie.title}</h1>
             <div className="hero-meta">
               <span className="hero-rating">
-                ★ {featuredMovie.vote_average.toFixed(1)}
+                {featuredMovie.vote_average.toFixed(1)}
               </span>
               <span>{featuredMovie.release_date?.split("-")[0]}</span>
               <span>
@@ -173,7 +173,9 @@ function Home() {
       <section className="popular-category">
         <div className="popular-title">
           <h1>Popular</h1>
-          <p>See All</p>
+          <Link to="/category/popular">
+            See All <span aria-hidden="true">→</span>
+          </Link>
         </div>
         <div ref={popularScrollRef} className="movies-grid">
           {visibleMovies.map((movie) => (
@@ -185,7 +187,9 @@ function Home() {
       <section className="popular-category">
         <div className="popular-title">
           <h1>Upcoming</h1>
-          <p>See All</p>
+          <Link to="/category/upcoming">
+            See All <span aria-hidden="true">→</span>
+          </Link>
         </div>
         <div ref={upcomingScrollRef} className="movies-grid">
           {visibleUpcomingMovies.map((movie) => (
@@ -197,7 +201,9 @@ function Home() {
       <section className="popular-category">
         <div className="popular-title">
           <h1>Now Playing</h1>
-          <p>See All</p>
+          <Link to="/category/now-playing">
+            See All <span aria-hidden="true">→</span>
+          </Link>
         </div>
         <div ref={nowPlayingScrollRef} className="movies-grid">
           {visibleNowPlayingMovies.map((movie) => (
@@ -209,7 +215,9 @@ function Home() {
       <section className="popular-category">
         <div className="popular-title">
           <h1>Top Rated</h1>
-          <p>See All</p>
+          <Link to="/category/top-rated">
+            See All <span aria-hidden="true">→</span>
+          </Link>
         </div>
         <div ref={topRatedScrollRef} className="movies-grid">
           {visibleTopRatedMovies.map((movie) => (

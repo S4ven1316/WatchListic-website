@@ -77,7 +77,12 @@ function Search() {
           ))}
         </div>
 
-        {loading && <p>Searching...</p>}
+        {loading && (
+          <div className="search-spinner" role="status" aria-label="Searching" />
+        )}
+        {!loading && !error && searchQuery.trim() && movies.length === 0 && (
+          <p className="search-message">No Movies Found</p>
+        )}
         {!loading && movies.length > 0 && (
           <div className="movies-grid-search">
             {movies.map((movie) => (

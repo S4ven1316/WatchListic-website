@@ -197,6 +197,11 @@
 
 .popular-title p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.popular-title a {
+  text-decoration: none;
+  color: #a662f4;
 }

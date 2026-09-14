@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Favorite from "./pages/Favorite";
 import MovieDetails from "./pages/MovieDetails";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/category/:category" element={<Category />} />
         </Routes>
       </main>
     </MovieProvider>
