@@ -85,3 +85,14 @@
     gap: 1.5rem 0.75rem;
   }
 }
+
+@media (min-width: 561px) and (max-width: 1024px) {
+  .category-content {
+    padding-inline: 1.5rem;
+  }
+
+  .category-movies {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+  }
+}

@@ -136,6 +136,50 @@
   }
 
   .search-content {
-    margin-top: 80px;
+    margin-top: 76px;
+    padding-inline: 0.75rem;
+  }
+
+  .search-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .search-form input {
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .suggestion {
+    gap: 0.5rem;
+  }
+
+  .suggestion button {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .movies-grid-search {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.75rem;
+  }
+
+  .movies-grid-search .movie-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .search-content {
+    padding-inline: 1.5rem;
+  }
+
+  .movies-grid-search {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .movies-grid-search .movie-card {
+    width: 100%;
+    min-width: 0;
   }
 }

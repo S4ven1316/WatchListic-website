@@ -11,18 +11,19 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  font-family: var(--sans);
 }
 
 .navbar h1 {
   font-size: 30px;
-  font-family: Poppins, sans-serif;
+  font-family: var(--heading);
   font-weight: 600;
 }
 
 .right ul {
   display: flex;
   list-style-type: none;
-  font-family: Poppins, sans-serif;
+  font-family: var(--sans);
 }
 
 .right li {
@@ -50,6 +51,44 @@
 }
 
 .navbar img {
-  width: 250px;
-  padding: 0 20px;
+  display: block;
+  width: min(250px, 42vw);
+  height: auto;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 56px;
+    padding: 0 0.9rem;
+  }
+
+  .right ul {
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .right li {
+    margin: 0;
+  }
+
+  .right a {
+    gap: 0;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-label {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .right li {
+    margin: 0 0.75rem;
+  }
 }

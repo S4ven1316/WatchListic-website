@@ -10,7 +10,7 @@ import {
 } from "../services/api";
 import "../css/Category.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const categories = {
   popular: { title: "Popular Movies", load: getPopularMovies },
@@ -55,7 +55,7 @@ function Category() {
       <main className="category-content">
         <Link className="category-back" to="/">
           <span aria-hidden="true">
-            <FontAwesomeIcon icon={faRotateLeft} />
+            <FontAwesomeIcon icon={faArrowLeft} />
           </span>{" "}
           Back to home
         </Link>

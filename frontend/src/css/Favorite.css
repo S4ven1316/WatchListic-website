@@ -32,7 +32,9 @@
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   height: 350px;
-  width: 1400px;
+  width: min(100%, 1400px);
+  box-sizing: border-box;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -56,4 +58,51 @@
   color: black;
   border-radius: 8px;
   padding: 10px 20px;
+}
+
+@media (max-width: 700px) {
+  .favorite {
+    margin-top: 76px;
+    padding-inline: 0.75rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .fav-movies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.75rem;
+  }
+
+  .fav-movies-grid .movie-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .no-favorites {
+    min-height: 280px;
+    height: auto;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .no-favorites h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .favorite {
+    padding-inline: 1.5rem;
+  }
+
+  .fav-movies-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .fav-movies-grid .movie-card {
+    width: 100%;
+    min-width: 0;
+  }
 }

@@ -1,5 +1,154 @@
+/* ==========================================
+   1. DEKLARASI ALL FONT-FACE (Wajib Paling Atas)
+   ========================================== */
+
+/* Thin (100) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* ExtraLight (200) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light (300) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* SemiBold (600) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ExtraBold (800) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black (900) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("./assets/fonts/Urbanist-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Font Lain */
+@font-face {
+  font-family: "BBH Hegarty";
+  src: url("./assets/fonts/BBHHegarty-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================
+   2. VARIABEL & GLOBAL STYLE
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font: 18px/145% var(--sans);
+  --sans: "Urbanist", sans-serif;
+  --heading: "Urbanist", sans-serif;
+  --mono: monospace;
+
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -8,8 +157,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  :root {
     font-size: 16px;
   }
 }
@@ -36,10 +187,10 @@
 
 body {
   margin: 0;
+  font-family: var(--sans);
 }
 
 #root {
-  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -47,7 +198,6 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 h1,
@@ -61,20 +211,28 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+  h1 {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+  h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }

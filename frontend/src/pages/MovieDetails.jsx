@@ -6,7 +6,7 @@ import "../css/MovieDetails.css";
 import NavBar from "../components/NavBar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -44,7 +44,7 @@ function MovieDetails() {
           type="button"
           onClick={() => navigate(-1)}
         >
-          <FontAwesomeIcon icon={faRotateLeft} /> Back
+          <FontAwesomeIcon icon={faArrowLeft} /> Back
         </button>
         <p className="details-message">{error}</p>
       </main>
@@ -71,7 +71,7 @@ function MovieDetails() {
         type="button"
         onClick={() => navigate(-1)}
       >
-        <FontAwesomeIcon icon={faRotateLeft} /> Back
+        <FontAwesomeIcon icon={faArrowLeft} /> Back
       </button>
 
       <section className="movie-details-content">
